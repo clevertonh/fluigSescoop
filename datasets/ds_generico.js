@@ -4,6 +4,8 @@ function defineStructure() {
 		
 	setKey(["IDENTIFICADOR"],["DESCRICAO"]);
 	addIndex(["DESCRICAO"]);
+	
+	
 }
 
 
@@ -56,13 +58,7 @@ function createDataset(fields, constraints, sortFields) {
                 	  {IDENTIFICADOR:  'PARENTESCO',DESCRICAO:  'IRMAO'},
                 	  {IDENTIFICADOR:  'PARENTESCO',DESCRICAO:  'AVO'},
                 	  {IDENTIFICADOR:  'PARENTESCO',DESCRICAO:  'AVO'},
-                	  {IDENTIFICADOR:  'PARENTESCO',DESCRICAO:  'GUARDIAO'},
-                	  
-                	  {IDENTIFICADOR:  'TAMANHO_CAMISA',DESCRICAO:  'P'},
-                	  {IDENTIFICADOR:  'TAMANHO_CAMISA',DESCRICAO:  'M'},
-                	  {IDENTIFICADOR:  'TAMANHO_CAMISA',DESCRICAO:  'G'},
-                	  {IDENTIFICADOR:  'TAMANHO_CAMISA',DESCRICAO:  'GG'},
-                	  {IDENTIFICADOR:  'TAMANHO_CAMISA',DESCRICAO:  'XGG'}
+                	  {IDENTIFICADOR:  'PARENTESCO',DESCRICAO:  'GUARDIAO'}
                 	 
                 	  
                 ];
