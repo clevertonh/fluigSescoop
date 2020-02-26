@@ -1,0 +1,831 @@
+<html>
+   <head>
+      <meta charset="utf-8">
+      <link type="text/css" rel="stylesheet" href="/portal/resources/style-guide/css/fluig-style-guide.min.css"/>
+      <script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+      <script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+      <script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+      <script type="text/javascript" src="/webdesk/vcXMLRPC.js"></script>
+      <script type="text/javascript" src="/portal/resources/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+  	  <link type="text/css" rel="stylesheet" href="PlanoTrabalho.css"/>
+   </head>
+   <body>
+      <div class="container">
+         <div class="fluig-style-guide">
+            <!--  Imagem  -->
+            <div class="panel panel-default">
+               <div class="panel-body">
+                  <div class="col-xs-6 col-md-3">
+                     <img src="http://www.pecooperativo.coop.br/images/marca-sescoop200.png">
+                  </div>
+               </div>
+            </div>
+            <!--  Formulário  -->
+            <form name="planotrabalho" role="form">
+               <div class='panel panel-primary'>
+                  <div class="panel-heading">
+                     <div class="container text-center">
+                        <h4>Peça Orçamentária</h4>
+                     </div>
+                  </div>
+                  <div class="panel-body">
+                     <div class="row">
+                        <div class="col-md-12">
+                           <div id="exTab3" class="container-fluid">
+                              <ul class="nav nav-pills nav-justified">
+                                 <li class="active"><a href="#1b" data-toggle="tab">Instruções</a></li>
+                                 <li><a href="#2b" data-toggle="tab">Estruturação</a></li>
+                                 <li><a href="#3b" data-toggle="tab">Orçamento</a></li>
+                              </ul>
+                              <div class="tab-content clearfix">
+                                 <!-- Aba Instruções -->                                                              
+                                 <div class="tab-pane active" id="1b">
+                                    
+                                    
+                                      <div class="panel panel-success">
+                                       <div class="panel-heading ">
+                                          <h5 class="panel-title">
+                                             <b>Orientações Gerais</b>
+                                          </h5>
+                                       </div>
+                                        <div class="panel-body">
+                                          <br>
+                                          <h4>Conceito de Projeto</h4>
+                                          <p>Trabalho planejado, constituído por um conjunto de ações inter-relacionadas e coordenadas, orientadas para o alcance de um resultado exclusivo, dentro de um período de tempo determinado (início, meio e fim).
+                                          </p>
+                                           <p>Recomenda-se que as informações contidas no campos: Objetivo geral, resultados esperados, ação e descrição da ação sejam iniciadas com verbos no infinitivo. Ex.: Identificar, Mapear, etc.
+                                          </p>
+                                           <p>Cada projeto corresponderá a um arquivo específico, com as abas "estruturação" e "orçamento".
+                                          </p>
+                                         </div> 
+                                       </div>   
+                                    <div class="panel panel-success">
+                                       <div class="panel-heading ">
+                                          <h5 class="panel-title">
+                                             <b>Guia Estruturação - Conceitos</b>
+                                          </h5>
+                                       </div>
+                                       
+                                    <div class="panel-body">
+                                       <div class="row">                                       	                                    	  
+                                    	   <p><b>Público - Alvo:</b> Segmento de pessoas ou cooperativas (ou outro segmento previsto na proposta de valor) que se pretende atender com a execução do projeto
+                                    	   </p>										                                    	   
+                                     	</div>
+                                     <div class="row">                                     	
+                                    	   <p><b>Objetivo Geral:</b> Indica a finalidade do projeto em sua totalidade, deve ser descrito de forma concisa e contém a transformação a ser entregue</p>	
+                                     </div> 
+                                     <div class="row">                                     
+                                    	   <p><b>Resultados esperados:</b> É a transformação ou produto resultante da execução do projeto, dentro de seu horizonte de tempo (Transformação + Indicador +Meta + prazo)</p>	
+                                     </div> 
+                                     <div class="row">
+                                    	   <p><b>Vinculação Estratégica:</b> Identifica o objetivo estratégico ao qual o projeto está vinculado - após a seleção do objetivo, a Linha de Ação será carregada automaticamente para seleção</p>	
+                                     </div> 
+                                     <div class="row">                                     
+                                    	   <p><b>Ações:</b> Iniciativas específicas que devem ser executadas para gerar produtos, serviços ou processos que contribuam para o alcance dos resultados pactuados no projeto</p>	
+                                     </div> 
+                                     <div class="row">
+                                    	   <p><b>Detalhamento das Ações:</b></p>	
+                                     </div> 
+                                     <div class="row">
+                                    	   <p><b>Descrição da Ação:</b> Identificação clara e sintética da finalidade e escopo da ação proposta </p>	
+                                     </div> 
+                                     <div class="row">
+                                    	   <p><b>Marco Crítico:</b> Identificação dos eventos mais significativos para a realização da ação e que expressam o avanço de sua execução</p>	
+                                     </div> 
+                                     <div class="row">
+                                    	   <p><b>Produto:</b> bem ou serviço resultante da execução da ação</p>	
+                                     </div> 
+                                     <div class="row">
+                                    	   <p><b>Meta:</b> quantificação do produto obtido pela execução da ação</p>	
+                                     </div> 
+                                  </div> 
+                                       
+                                     </div>   
+                                    
+                                                           
+                                    <div class="panel panel-success" id="panelItens">
+                                       <div class="panel-heading ">
+                                          <h3 class="panel-title">
+                                             <b>Guia Orçamento</b>
+                                          </h3>
+                                       </div>
+                                       <div class="panel-body">
+                                          <div class="row">
+                                          	<p>Detalhamento mensal, por conta orçamentária, do recurso previsto para execução do Projeto. O orçamento mensal deverá ser detalhado para todo o horizonte de execução do projeto.</p>
+                                          </div>
+                                          
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!-- Aba Estruturação -->
+                                 <div class="tab-pane" id="2b">
+									<div class="row">
+                                       <div class="form-group col-md-12">
+                                       		<label>Descrição do projeto</label>
+                                       		<input type="text" class="form-control" id="descricaoprjeto" name="descricaoprojeto">
+                                       </div>                                    								
+									</div>
+									<div class="row">
+										<div class="form-group col-md-3">
+                                                            <label for="datanasc">Data de início do projeto:</label>
+                                                            <div class="input-group date">
+                                                               <input type="text" class="form-control"
+                                                                  id="dtinicioprj"
+                                                                  name="dtinicioprj" > 
+                                                                  <span class="input-group-addon"> 
+                                                                  		<span class="fluigicon fluigicon-calendar"></span>
+                                                               </span>
+                                        	</div>
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                                            <label for="datanasc">Data de término do projeto:</label>
+                                                            <div class="input-group date" >
+                                                               <input type="text" class="form-control"
+                                                                  id="dtfimprj"
+                                                                  name="dtfimprj" > <span
+                                                                  class="input-group-addon"> <span
+                                                                  class="fluigicon fluigicon-calendar"></span>
+                                                               </span>
+                                        	</div>
+                                        </div>
+                                        
+									</div>
+									<div class="row">
+										<div class="form-group col-md-4">
+                                        	<label>Responsável Técnico do projeto</label>
+                                        	<input type="text" class="form-control" id="responsavel" name="responsavel">
+                                        </div>
+                                        <div class="form-group col-md-5">
+                                        	<label>E-mail do Responsável Técnico do projeto</label>
+                                        	<input type="email" class="form-control" id="emailresponsavel" name="emailresponsavel">
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                        	<label>Telefone do Responsável Técnico</label>
+                                        	<input type="tel" class="form-control" id="telresponsavel" name="telresponsavel">
+                                        </div>
+									</div>
+									<div class="panel panel-success">
+                                       <div class="panel-heading ">
+                                          <h5 class="panel-title">
+                                             <b>Público-Alvo</b>
+                                          </h5>
+                                       </div>
+	                                    <div class="panel-body">
+	                                       <div class="form-group row">                                       	
+	                                    	  <div class="form-group col-md-12">
+	                                    	  		<textarea rows="3" cols="12" name="publicoalvo" id="publicoalvo" class="form-control"></textarea>
+	                                    	  </div> 
+	                                       </div>
+	                                  	</div> 
+                                     </div>
+                                     <div class="panel panel-success">
+	                                     	<div class="panel-heading ">
+	                                          <h5 class="panel-title">
+	                                             <b>Objetivo Geral</b>
+	                                          </h5>
+	                                       </div>
+	                                       <div class="panel-body">
+	                                       		<div class="row">                                       	
+	                                    	 		 <div class="form-group col-md-12">
+	                                    	  				<textarea rows="4" cols="12" name="objetivogeral" id="objetivogeral" class="form-control"></textarea>
+	                                    	  		</div> 
+	                                       		</div>
+	                                  		</div> 
+                                     </div>
+                                     <div class="panel panel-success">
+	                                     	<div class="panel-heading ">
+	                                          <h5 class="panel-title">
+	                                             <b>Resultados Esperado (transformação + indicador + meta + prazo)</b>
+	                                          </h5>
+	                                       </div>
+	                                       <div class="panel-body">
+	                                       		<div class="row"> 
+	                                       			<div class="form-group col-md-1">
+	                                       				<h6>1.</h6>
+	                                       			</div>    
+	                                       			<div class="form-group col-md-11">
+	                                       				<input type="text" id="resultado1" name="resultado1" class="form-control" >	 
+	                                       			</div>                                  	
+	                                    	 			
+	                                       		</div><br>		
+	                                       		<div class="row">
+	                                       			<div class="form-group col-md-1">
+	                                       				<h6>2.</h6>
+	                                       			</div> 
+	                                       			<div class="form-group col-md-11">
+	                                       				<input type="text" id="resultado2" name="resultado2" class="form-control" >	 
+	                                       			</div>    
+	                                       		</div><br>
+	                                       		<div class="row">
+	                                       			<div class="form-group col-md-1">
+	                                       				<h6>3.</h6>
+	                                       			</div> 
+	                                       			<div class="form-group col-md-11">
+	                                       				<input type="text" id="resultado3" name="resultado3" class="form-control" >	 
+	                                       			</div>    
+	                                       		</div><br>
+	                                       		<div class="row">
+	                                       			<div class="form-group col-md-1">
+	                                       				<h6>4.</h6>
+	                                       			</div> 
+	                                       			<div class="form-group col-md-11">
+	                                       				<input type="text" id="resultado4" name="resultado4" class="form-control" >	 
+	                                       			</div>     
+	                                       		</div>
+	                                  		</div> 
+                                     </div>
+                                     <div class="panel panel-success">
+	                                     	<div class="panel-heading ">
+	                                          <h5 class="panel-title">
+	                                             <b>Vinculação Estratégica</b>
+	                                          </h5>
+	                                       </div>
+	                                       <div class="panel-body">
+	                                       		<div class="row">                                       	
+	                                    	 		 <div class="form-group col-md-6">
+	                                    	 		 		<label>Objetivo Estratégico</label><br>
+	                                    	 		 		<input type="zoom" name="cObjEstrategico" id="cObjEstrategico" class="form-control"
+															  		data-zoom="{
+															    	'displayKey':'cObjEstrategico',
+															    	'filterValues':'cStatus,Ativo',
+															        'datasetId':'DSObjetivoEstrategico',
+															        'maximumSelectionLength':'1',
+															        'placeholder':'Selecione',
+															        'fields':[
+															        {'field':'cCodigo', 'label':'CODIGO'},
+															        {'field':'cObjEstrategico', 'label':'DESCRICAO', 'standard':'true' }
+															        ]
+															     	}" />
+	                                    	 		 </div>
+	                                    	 		 <div class="form-group col-md-6">
+	                                    	 		 		<label>Linha de Ação</label><br>
+	                                    	 		 		<input type="zoom" name="cLinhaAcao" id="cLinhaAcao" class="form-control"
+															  		data-zoom="{
+															    	'displayKey':'cLinhaAcao',
+															        'datasetId':'DSLinhaAcao',		
+															        'filterValues':'cStatus,Ativo',													        
+															        'maximumSelectionLength':'1',
+															        'placeholder':'Selecione',
+															        'fields':[
+															        {'field':'cCodigo', 'label':'CODIGO'},
+															        {'field':'cObjetivo', 'label':'OBJETIVO_ESTRATEGICO', 'visible' : 'false'},
+															        {'field':'cLinhaAcao', 'label':'DESCRICAO', 'standard':'true' }
+															        ]
+															     	}" />
+	                                    	 		 </div>
+	                                       		</div>
+	                                  		</div> 
+                                     </div>
+                                     <div class="panel panel-success">
+	                                     	<div class="panel-heading ">
+	                                          <h5 class="panel-title">
+	                                             <b>Liste as Ações</b>
+	                                          </h5>
+	                                       </div>
+	                                       <div class="panel-body">
+	                                       		<div class="row">
+	                                       			<div class="form-group col-md-1">
+	                                       				<h6>Ação 1</h6>
+	                                       			</div> 
+	                                       			<div class="form-group col-md-11">
+	                                       				<input type="text" name="acao1" id="acao1" class="form-control"> 
+	                                       			</div>    
+	                                       		</div><br>
+                                                 <div class="row">
+	                                       			<div class="form-group col-md-1">
+	                                       				<h6>Ação 2</h6>
+	                                       			</div> 
+	                                       			<div class="form-group col-md-11">
+	                                       				<input type="text" name="acao2" id="acao2" class="form-control">  
+	                                       			</div>    
+	                                       		</div><br>
+	                                       		<div class="row">
+	                                       			<div class="form-group col-md-1">
+	                                       				<h6>Ação 3</h6>
+	                                       			</div> 
+	                                       			<div class="form-group col-md-11">
+	                                       				<input type="text" name="acao3" id="acao3" class="form-control">  
+	                                       			</div>    
+	                                       		</div><br> 
+	                                       		<div class="row">
+	                                       			<div class="form-group col-md-1">
+	                                       				<h6>Ação 4</h6>
+	                                       			</div> 
+	                                       			<div class="form-group col-md-11">
+	                                       				<input type="text" name="acao4" id="acao4" class="form-control">  
+	                                       			</div>    
+	                                       		</div><br> 
+	                                       		<div class="row">
+	                                       			<div class="form-group col-md-1">
+	                                       				<h6>Ação 5</h6>
+	                                       			</div> 
+	                                       			<div class="form-group col-md-11">
+	                                       				<input type="text" name="acao5" id="acao5" class="form-control">  
+	                                       			</div>    
+	                                       		</div><br> 
+	                                       		<div class="row">
+	                                       			<div class="form-group col-md-1">
+	                                       				<h6>Ação 6</h6>
+	                                       			</div> 
+	                                       			<div class="form-group col-md-11">
+	                                       				<input type="text" name="acao6" id="acao6" class="form-control">  
+	                                       			</div>    
+	                                       		</div><br> 
+	                                       		<div class="row">
+	                                       			<div class="form-group col-md-1">
+	                                       				<h6>Ação 7</h6>
+	                                       			</div> 
+	                                       			<div class="form-group col-md-11">
+	                                       				<input type="text" name="acao7" id="acao7" class="form-control">  
+	                                       			</div>    
+	                                       		</div><br> 
+	                                       		<div class="row">
+	                                       			<div class="form-group col-md-1">
+	                                       				<h6>Ação 8</h6>
+	                                       			</div> 
+	                                       			<div class="form-group col-md-11">
+	                                       				<input type="text" name="acao8" id="acao8" class="form-control">  
+	                                       			</div>    
+	                                       		</div><br> 
+	                                       		<div class="row">
+	                                       			<div class="form-group col-md-1">
+	                                       				<h6>Ação 9</h6>
+	                                       			</div> 
+	                                       			<div class="form-group col-md-11">
+	                                       				<input type="text" name="acao9" id="acao9" class="form-control">  
+	                                       			</div>    
+	                                       		</div><br> 
+	                                       		<div class="row">
+	                                       			<div class="form-group col-md-1">
+	                                       				<h6>Ação 10</h6>
+	                                       			</div> 
+	                                       			<div class="form-group col-md-11">
+	                                       				<input type="text" name="acao10" id="acao10" class="form-control">  
+	                                       			</div>    
+	                                       		</div><br>         
+	                                  		</div> 
+                                     </div>
+                                     
+                                     <div class="panel panel-success">
+	                                     	<div class="panel-heading ">
+	                                          <h5 class="panel-title">
+	                                             <b>Detalhamento das Ações</b>
+	                                          </h5>
+	                                       </div>
+	                                       <div class="panel-body">
+	                                       		<button class="accordion_acao">Ação 1:</button>
+	                                       		<div class="panel_acao">
+	                                       			<div class="row">	                                       			
+		                                       			<div class="form-group col-md-8">
+		                                       				<label>Descrição</label>
+		                                       				<textarea rows="3" class="form-control" name="detalheacao1" id="detalheacao1"></textarea>	 
+		                                       			</div> 
+		                                       			<div class="form-group col-md-2">
+	                                                         <label for="dinicialdet1">Dt Inicial</label>
+	                                                         <div class="input-group date" >
+	                                                            <input type="text" class="form-control" id="dinicialdet1" name="dinicialdet1" >
+	                                                            <span class="input-group-addon">
+	                                                            <span class="fluigicon fluigicon-calendar"></span>
+	                                                            </span>
+	                                                         </div>
+	                                                      </div>
+	                                                      <div class="form-group col-md-2">
+	                                                         <label for="dfinaldet1">Dt Final</label>
+	                                                         <div class="input-group date" >
+	                                                            <input type="text" class="form-control" id="dfinaldet1" name="dfinaldet1" >
+	                                                            <span class="input-group-addon">
+	                                                            <span class="fluigicon fluigicon-calendar"></span>
+	                                                            </span>
+	                                                         </div>
+	                                                      </div>   
+	                                       			</div>
+	                                       			<div class="row">
+		                                       			<div class="form-group col-md-6">
+		                                       				<label>Coordenador da Ação</label>
+		                                       				<input type="text" id="cordenador1" name="cordenador1" class="form-control">
+		                                       			</div>
+		                                       			<div class="form-group col-md-6">
+		                                       				<label>Entidade</label>
+		                                       				<input type="text" id="entidade1" name="entidade1" class="form-control">
+		                                       			</div>
+	                                       			</div>   
+	                                       			<div class="row">
+		                                       			<div class="form-group col-md-12">
+		                                       				<label>Financiador(es)</label>
+		                                       				<input type="text" id="financiador1" name="financiador1" class="form-control">
+		                                       			</div>
+	                                       			</div>  
+	                                       			<div class="row">
+		                                       			<div class="form-group col-md-6">
+		                                       				<label>Área de Atuação</label>
+		                                       				<input type="zoom" name="cAreaAtuacao" id="cAreaAtuacao" class="form-control"
+																  		data-zoom="{
+																    	'displayKey':'cDescricao',
+																        'datasetId':'DSAreaAtuacao',
+																        'filterValues':'cStatus,Ativo',															        
+																        'maximumSelectionLength':'1',
+																        'placeholder':'Selecione',
+																        'fields':[
+																        {'field':'cCodigo', 'label':'CODIGO'},
+																        {'field':'cDescricao', 'label':'DESCRICAO', 'standard':'true' }
+																        ]
+																     	}" />
+		                                       			</div>
+		                                       			<div class="form-group col-md-6">
+		                                       				<label>Natureza</label>
+		                                       				<input type="zoom" name="cNatureza" id="cNatureza" class="form-control"
+																  		data-zoom="{
+																    	'displayKey':'cDescricao',
+																        'datasetId':'DSNatureza',	
+																        'filterValues':'cStatus,Ativo',														        
+																        'maximumSelectionLength':'1',
+																        'placeholder':'Selecione',
+																        'fields':[
+																        {'field':'cCodigo', 'label':'CODIGO'},
+																        {'field':'codigoarea', 'label':'AREA_ATUACAO', 'visible' : 'false'},
+																        {'field':'cDescricao', 'label':'DESCRICAO', 'standard':'true' }
+																        ]
+																     	}" />
+		                                       			</div>
+	                                       			</div>
+	                                       				<div class="panel panel-success">
+	                                       					<div class="panel-heading">Marcos Críticos</div>
+	                                       					 	<div class="panel-body">
+	                                       					 			<div class="row">
+	                                       					 					<div class="form-group col-md-9">
+					                                       					<label>Descrição</label>
+					                                       					<input type="text" id="marco1" name="marco1" class="form-control">
+					                                       					<input type="text" id="marco2" name="marco2" class="form-control">
+					                                       					<input type="text" id="marco3" name="marco3" class="form-control">
+					                                       					<input type="text" id="marco4" name="marco4" class="form-control">
+					                                       					<input type="text" id="marco5" name="marco5" class="form-control">
+				                                       					</div>
+				                                       					<div class="form-group col-md-3">
+				                                       						<label>Data Prevista</label>
+				                                       					</div>
+	                                       					 			</div>
+	                                       					 			
+	                                       					 	</div>
+	                                       					
+	                                       				</div>
+	                                       			
+	                                       			<div class="panel panel-success">
+	                                       				<div class="panel-heading">Produto</div>
+	                                       					<div class="panel-body">
+	                                       						<div class="row">
+	                                       								<div class="form-group col-md-9">
+					                                       					<label>Descrição</label>
+					                                       					<input type="text" id="produto1" name="produto1" class="form-control">
+					                                       					<input type="text" id="produto2" name="produto2" class="form-control">
+					                                       					<input type="text" id="produto3" name="produto3" class="form-control">
+					                                       					<input type="text" id="produto4" name="produto4" class="form-control">
+					                                       				</div>
+					                                       				<div class="form-group col-md-3">
+					                                       					<label>Meta prevista</label>
+					                                       					<input type="number" id="meta1" name="meta1" class="form-control" min="1">
+					                                       					<input type="number" id="meta2" name="meta2" class="form-control" min="1">
+					                                       					<input type="number" id="meta3" name="meta3" class="form-control" min="1">
+					                                       					<input type="number" id="meta4" name="meta4" class="form-control" min="1">
+					                                       				</div>
+	                                       						</div>
+	                                       					</div>
+	                                       			</div>
+	                                       			<div class="panel panel-success">
+	                                       					<div class="panel-heading">Financeiro</div>    
+	                                       						<div class="panel-body">
+	                                       							<div class="row">
+	                                       								<div class="form-group col-md-5">
+	                                       									<label>Entidade</label>
+	                                       								</div>
+	                                       								<div class="form-group col-md-7">
+	                                       									<label>Previsto</label>
+	                                       								</div>
+	                                       								<div class="row">
+	                                       									<div class="form-group col-md-5"></div>
+	                                       									<div class="form-group col-md-1">
+	                                       										<label>2020</label>
+	                                       									</div>
+	                                       									<div class="form-group col-md-1">
+	                                       										<label>2021</label>
+	                                       									</div>
+	                                       									<div class="form-group col-md-1">
+	                                       										<label>2022</label>
+	                                       									</div>
+	                                       									<div class="form-group col-md-1">
+	                                       										<label>2023</label>
+	                                       									</div>
+	                                       									<div class="form-group col-md-1">
+	                                       										<label>2024</label>
+	                                       									</div>
+	                                       								</div>
+	                                       							</div>
+	                                       							<div class="row">
+	                                       								<div class="row">
+	                                       									<div class="form-group col-md-5">
+					                                       						<input type="text" id="entidadeF1" name="entidadeF1" class="form-control" >			                                       					
+					                                       					</div>
+					                                       					<div class="form-group col-md-1">
+					                                       						<input type="number" id="entidadeprevista" name="ent1previsto1" class="form-control" >
+					                                       					</div>
+					                                       					<div class="form-group col-md-1">
+					                                       					
+					                                       						<input type="number" id="entidadeprevista" name="ent1previsto2" class="form-control">
+						                                       				</div>
+						                                       				<div class="form-group col-md-1">
+						                                       					
+						                                       					<input type="number" id="entidadeprevista" name="ent1previsto3" class="form-control">
+						                                       				</div>
+						                                       				<div class="form-group col-md-1">
+						                                       					
+						                                       					<input type="number" id="entidadeprevista" name="ent1previsto4" class="form-control" >
+						                                       				</div>
+						                                       				<div class="form-group col-md-1">
+						                                       					
+						                                       					<input type="number" id="entidadeprevista" name="ent1previsto5" class="form-control">
+						                                       				</div>
+	                                       								</div>
+	                                       								<div class="row">
+	                                       									<div class="form-group col-md-5">
+	                                       										<input type="text" id="entidadeF2" name="entidadeF2" class="form-control">
+	                                       									</div>
+	                                       									<div class="form-group col-md-1">
+					                                       						<input type="number" id="entidadeprevista" name="ent2previsto1" class="form-control">
+					                                       					</div>
+					                                       					<div class="form-group col-md-1">
+					                                       					
+					                                       						<input type="number" id="entidadeprevista" name="ent2previsto2" class="form-control">
+						                                       				</div>
+						                                       				<div class="form-group col-md-1">
+						                                       					
+						                                       					<input type="number" id="entidadeprevista" name="ent2previsto3" class="form-control">
+						                                       				</div>
+						                                       				<div class="form-group col-md-1">
+						                                       					
+						                                       					<input type="number" id="entidadeprevista" name="ent2previsto4" class="form-control" >
+						                                       				</div>
+						                                       				<div class="form-group col-md-1">
+						                                       					
+						                                       					<input type="number" id="entidadeprevista" name="ent2previsto5" class="form-control">
+						                                       				</div>
+	                                       								</div>
+	                                       								<div class="row">
+	                                       										<div class="form-group col-md-5">
+	                                       											<input type="text" id="entidadeF3" name="entidadeF3" class="form-control">
+	                                       										</div>
+	                                       										<div class="form-group col-md-1">
+					                                       							<input type="number" id="entidadeprevista" name="ent3previsto1" class="form-control">
+						                                       					</div>
+						                                       					<div class="form-group col-md-1">
+						                                       					
+						                                       						<input type="number" id="entidadeprevista" name="ent3previsto2" class="form-control">
+							                                       				</div>
+							                                       				<div class="form-group col-md-1">
+							                                       					
+							                                       					<input type="number" id="entidadeprevista" name="ent3previsto3" class="form-control">
+							                                       				</div>
+							                                       				<div class="form-group col-md-1">
+							                                       					
+							                                       					<input type="number" id="entidadeprevista" name="ent3previsto4" class="form-control" >
+							                                       				</div>
+							                                       				<div class="form-group col-md-1">
+							                                       					
+							                                       					<input type="number" id="entidadeprevista" name="ent3previsto5" class="form-control">
+							                                       				</div>
+	                                       								</div>
+	                                       								<div class="row">
+	                                       									<div class="form-group col-md-5">
+	                                       										<input type="text" id="entidadeF4" name="entidadeF4" class="form-control">
+	                                       									</div>
+	                                       									<div class="form-group col-md-1">
+					                                       						<input type="number" id="entidadeprevista" name="ent4previsto1" class="form-control">
+					                                       					</div>
+					                                       					<div class="form-group col-md-1">
+					                                       					
+					                                       						<input type="number" id="entidadeprevista" name="ent4previsto2" class="form-control">
+						                                       				</div>
+						                                       				<div class="form-group col-md-1">
+						                                       					
+						                                       					<input type="number" id="entidadeprevista" name="ent4previsto3" class="form-control">
+						                                       				</div>
+						                                       				<div class="form-group col-md-1">
+						                                       					
+						                                       					<input type="number" id="entidadeprevista" name="ent4previsto4" class="form-control" >
+						                                       				</div>
+						                                       				<div class="form-group col-md-1">
+						                                       					
+						                                       					<input type="number" id="entidadeprevista" name="ent4previsto5" class="form-control">
+						                                       				</div>
+	                                       								</div>
+			                                       					</div>	
+	                                       						</div>                                   				
+	                                       					                                       				
+	                                       			</div>
+	                                       			 
+	                                       		</div>
+	                                       		<br>
+	                                       		<button class="accordion_acao">Ação 2:</button>
+	                                       		<div class="panel_acao">
+	                                       			<div class="row">	                                       			
+		                                       			<div class="form-group col-md-8">
+		                                       				<label>Descrição</label>
+		                                       				<textarea rows="3" class="form-control" name="detalheacao2" id="detalheacao2"></textarea>	 
+		                                       			</div> 
+		                                       			<div class="form-group col-md-2">
+	                                                         <label for="dinicialdet2">Dt Inicial</label>
+	                                                         <div class="input-group date" >
+	                                                            <input type="text" class="form-control" id="dinicialdet2" name="dinicialdet2" >
+	                                                            <span class="input-group-addon">
+	                                                            <span class="fluigicon fluigicon-calendar"></span>
+	                                                            </span>
+	                                                         </div>
+	                                                      </div>
+	                                                      <div class="form-group col-md-2">
+	                                                         <label for="dfinaldet2">Dt Final</label>
+	                                                         <div class="input-group date" >
+	                                                            <input type="text" class="form-control" id="dfinaldet2" name="dfinaldet2" >
+	                                                            <span class="input-group-addon">
+	                                                            <span class="fluigicon fluigicon-calendar"></span>
+	                                                            </span>
+	                                                         </div>
+	                                                      </div>   
+	                                       			</div>
+	                                       			<div class="row">
+		                                       			<div class="form-group col-md-6">
+		                                       				<label>Coordenador da Ação</label>
+		                                       				<input type="text" id="cordenador2" name="cordenador2" class="form-control">
+		                                       			</div>
+		                                       			<div class="form-group col-md-6">
+		                                       				<label>Entidade</label>
+		                                       				<input type="text" id="entidade2" name="entidade2" class="form-control">
+		                                       			</div>
+	                                       			</div>   
+	                                       			<div class="row">
+		                                       			<div class="form-group col-md-12">
+		                                       				<label>Financiador(es)</label>
+		                                       				<input type="text" id="financiador2" name="financiador2" class="form-control">
+		                                       			</div>
+	                                       			</div>  
+	                                       			<div class="row">
+		                                       			<div class="form-group col-md-6">
+		                                       				<label>Área de Atuação</label>
+		                                       				<input type="zoom" name="cAreaAtuacao2" id="cAreaAtuacao2" class="form-control"
+																  		data-zoom="{
+																    	'displayKey':'cLinhaAcao',
+																        'datasetId':'DSLinhaAcao',	
+																        'filterValues':'cStatus,Ativo',														        
+																        'maximumSelectionLength':'1',
+																        'placeholder':'Selecione uma linha de ação',
+																        'fields':[
+																        {'field':'cCodigo', 'label':'CODIGO'},
+																        {'field':'cObjetivo', 'label':'OBJETIVO_ESTRATEGICO', 'visible' : 'false'},
+																        {'field':'cLinhaAcao', 'label':'DESCRICAO', 'standard':'true' }
+																        ]
+																     	}" />
+		                                       			</div>
+		                                       			<div class="form-group col-md-6">
+		                                       				<label>Natureza</label>
+		                                       				<input type="zoom" name="cNatureza2" id="cNatureza2" class="form-control"
+																  		data-zoom="{
+																    	'displayKey':'cLinhaAcao',
+																        'datasetId':'DSLinhaAcao',	
+																        'filterValues':'cStatus,Ativo',														        
+																        'maximumSelectionLength':'1',
+																        'placeholder':'Selecione uma linha de ação',
+																        'fields':[
+																        {'field':'cCodigo', 'label':'CODIGO'},
+																        {'field':'cObjetivo', 'label':'OBJETIVO_ESTRATEGICO', 'visible' : 'false'},
+																        {'field':'cLinhaAcao', 'label':'DESCRICAO', 'standard':'true' }
+																        ]
+																     	}" />
+		                                       			</div>
+	                                       			</div> 
+	                                       		</div>
+	                                       		<br>
+	                                       		<button class="accordion_acao">Ação 3:</button>
+	                                       		<div class="panel_acao">
+	                                       			<div class="row">	                                       			
+		                                       			<div class="form-group col-md-8">
+		                                       				<label>Descrição</label>
+		                                       				<textarea rows="3" class="form-control" name="detalheacao3" id="detalheacao3"></textarea>	 
+		                                       			</div> 
+		                                       			<div class="form-group col-md-2">
+	                                                         <label for="dinicialdet3">Dt Inicial</label>
+	                                                         <div class="input-group date" >
+	                                                            <input type="text" class="form-control" id="dinicialdet3" name="dinicialdet3" >
+	                                                            <span class="input-group-addon">
+	                                                            <span class="fluigicon fluigicon-calendar"></span>
+	                                                            </span>
+	                                                         </div>
+	                                                      </div>
+	                                                      <div class="form-group col-md-2">
+	                                                         <label for="dfinaldet3">Dt Final</label>
+	                                                         <div class="input-group date" >
+	                                                            <input type="text" class="form-control" id="dfinaldet3" name="dfinaldet3" >
+	                                                            <span class="input-group-addon">
+	                                                            <span class="fluigicon fluigicon-calendar"></span>
+	                                                            </span>
+	                                                         </div>
+	                                                      </div>   
+	                                       			</div>
+	                                       			<div class="row">
+		                                       			<div class="form-group col-md-6">
+		                                       				<label>Coordenador da Ação</label>
+		                                       				<input type="text" id="cordenador3" name="cordenador3" class="form-control">
+		                                       			</div>
+		                                       			<div class="form-group col-md-6">
+		                                       				<label>Entidade</label>
+		                                       				<input type="text" id="entidade3" name="entidade3" class="form-control">
+		                                       			</div>
+	                                       			</div>   
+	                                       			<div class="row">
+		                                       			<div class="form-group col-md-12">
+		                                       				<label>Financiador(es)</label>
+		                                       				<input type="text" id="financiador3" name="financiador3" class="form-control">
+		                                       			</div>
+	                                       			</div>  
+	                                       			<div class="row">
+		                                       			<div class="form-group col-md-6">
+		                                       				<label>Área de Atuação</label>
+		                                       				<input type="zoom" name="cAreaAtuacao3" id="cAreaAtuacao3" class="form-control"
+																  		data-zoom="{
+																    	'displayKey':'cDescricao',
+																        'datasetId':'DSAreaAtuacao',
+																        'filterValues':'cStatus,Ativo',															        
+																        'maximumSelectionLength':'1',
+																        'placeholder':'Selecione',
+																        'fields':[
+																        {'field':'cCodigo', 'label':'CODIGO'},
+																        {'field':'cDescricao', 'label':'DESCRICAO', 'standard':'true' }
+																        ]
+																     	}" />
+		                                       			</div>
+		                                       			<div class="form-group col-md-6">
+		                                       				<label>Natureza</label>
+		                                       				<input type="zoom" name="cNatureza3" id="cNatureza3" class="form-control"
+																  		data-zoom="{
+																    	'displayKey':'cDescricao',
+																        'datasetId':'DSNatureza',		
+																        'filterValues':'cStatus,Ativo',													        
+																        'maximumSelectionLength':'1',
+																        'placeholder':'Selecione',
+																        'fields':[
+																        {'field':'cCodigo', 'label':'CODIGO'},
+																        {'field':'codigoarea', 'label':'AREA_ATUACAO', 'visible' : 'false'},
+																        {'field':'cDescricao', 'label':'DESCRICAO', 'standard':'true' }
+																        ]
+																     	}" />
+		                                       			</div>
+	                                       			</div>	 
+												</div>
+	                                       		<br>
+	                                       		<button class="accordion_acao">Ação 4:</button>
+	                                       		<div class="panel_acao">	 
+												</div>
+	                                       		<br>
+	                                       		<button class="accordion_acao">Ação 5:</button>
+	                                       		<div class="panel_acao">	 
+												</div>
+	                                       		<br>
+	                                       		<button class="accordion_acao">Ação 6:</button>
+	                                       		<div class="panel_acao">	 
+												</div>
+	                                       		<br>
+	                                       		<button class="accordion_acao">Ação 7:</button>
+	                                       		<div class="panel_acao">	 
+												</div>
+	                                       		<br>
+	                                       		<button class="accordion_acao">Ação 8:</button>
+	                                       		<div class="panel_acao">	 
+												</div>
+	                                       		<br>
+	                                       		<button class="accordion_acao">Ação 9:</button>
+	                                       		<div class="panel_acao">	 
+												</div>
+	                                       		<br>
+	                                       		<button class="accordion_acao">Ação 10:</button>
+	                                       		<div class="panel_acao">	 
+												</div>
+	                                  		</div> 
+                                     </div>
+                                     
+                                     
+                                 </div>
+                                 <!-- Aba Orçamento -->
+                                 <div class="tab-pane" id="3b">
+                                    
+                                    
+                                   
+                                 </div>
+
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+    <script src="PlanoTrabalho.js"></script>
+   </body>
+</html>
