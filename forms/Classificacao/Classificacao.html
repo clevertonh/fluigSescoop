@@ -19,15 +19,19 @@
 	 <div class='panel panel-success'>
 	 	<div class="panel-heading">
              <div class="container text-center">
-                  <h4>Cadastro de Linha de ação</h4>
+                  <h4>Cadastro de Classificação</h4>
              </div>
         </div>
-        <div class="panel-body">
+        <div class="panel-body">	
         	<div class="row">
         		<div class="form-group col-md-1">
         			<label>Código</label>
-        			<input class="form-control" type="text" id="cCodigo" name="cCodigo" >
+        			<input class="form-control" type="text" id="cCodigo" name="cCodigo">
         		</div>
+        		 <div class="form-group col-md-7">
+					<label>Descrição</label>
+					<input type="text" id="cDescricao" name="cDescricao" class="form-control">
+				</div>
                 <div class="form-group col-md-3">
                 	<label>Status</label>
                 	<select class="form-control" name="cStatus">
@@ -35,39 +39,13 @@
 					    <option value="Inativo">Inativo</option>
 					</select>
                 </div>
+               
         	</div>
-        	<div class="row">
-				<div class="form-group col-md-12">
-					<label>Descrição da Linha de Ação</label>
-					<textarea class="form-control" rows="6" id="cLinhaAcao" name="cLinhaAcao"></textarea>
-				</div>
-			</div>
-			<div class="row">
-        		<div class="form-group col-md-8">
-				     	<label>Objetivo Estratégico</label><br>                                                        
-				  		<input type="zoom" name="cObjEstrategico" id="cObjEstrategico" 
-				  		data-zoom="{
-				    	'displayKey':'cObjEstrategico',
-				    	'filterValues':'cStatus,Ativo',
-				        'datasetId':'DSObjetivoEstrategico',
-				        'maximumSelectionLength':'1',
-				        'placeholder':'Selecione um objetivo estratégico',
-				        'fields':[
-				        {'field':'cCodigo', 'label':'CODIGO'},
-				        {'field':'cObjEstrategico', 'label':'DESCRICAO', 'standard':'true' }
-				        ]
-				     	}" />
-				</div>
-				<div class="form-group col-md-2">
-					<label>Código Objetivo</label>
-					<input type="text" name="cObjetivo" id="cObjetivo" class="form-control" readonly>
-				</div>
-        	</div>
+        	
         </div>
 	 </div>
 	
 </form>
 </div>
- <script src="LinhaAcao.js"></script>
 </body>
 </html>
